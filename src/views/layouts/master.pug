@@ -40,12 +40,6 @@ html(lang='en')
     link(rel='icon', type='image/png', sizes='16x16', href=require('images/favicons/favicon-16x16.png'))
     link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
 
-    //- Preload fonts
-    link(type='font/woff', href=require('source/assets/fonts/Quicksand-Bold.woff'), rel='preload', as='font', crossorigin)
-    link(type='font/woff', href=require('source/assets/fonts/Quicksand-Medium.woff'), rel='preload', as='font', crossorigin)
-    link(type='font/woff', href=require('source/assets/fonts/Quicksand-Regular.woff'), rel='preload', as='font', crossorigin)
-    link(type='font/woff', href=require('source/assets/fonts/Quicksand-Light.woff'), rel='preload', as='font', crossorigin)
-
     //- Title
     block title
       title Your project!
@@ -56,9 +50,9 @@ html(lang='en')
       meta(name='msapplication-config' content='./browserconfig.xml')
 
   body
-
+    include ../mixins.pug
     //- Menu
-    include ../components/menu.pug
+    include ../components/header.pug
 
     //- block content
     block content

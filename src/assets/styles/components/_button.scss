@@ -1,17 +1,20 @@
 /* src/assets/styles/components/_button.scss  */
 
-.clean-button {
+.btn {
+  font-family: $font-manrope;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-dark;
+  padding: 26px 52px;
   border: none;
-  background: none;
-}
+  outline: none;
 
-.button {
-  @extend .clean-button;
-  font-family: $quicksand;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 5px;
-  color: white;
-  padding: 14px 40px;
-  background: $lightseagreen;
+  &-primary {
+    background: $color-yellow;
+    border-radius: 100px;
+  }
 }

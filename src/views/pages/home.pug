@@ -1,0 +1,77 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Blog
+
+block basicSeo
+  meta(name='description' content='Blog page')
+  meta(name='keywords', content='blog, page')
+  meta(name='author' content='')
+
+block manifestBrowserconfigFiles
+  link(rel='manifest', href='../manifest.json')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+  section.start
+    img(src=require("images/bg-01.png")).start__bg
+    .start__sportmen
+      img(src=require("images/start-01.png"))
+    .start__title
+      img(src=require("images/title-banner.svg"))
+      .start__title-text
+        h1 Фитнес-клуб
+        p в центре Белгорода
+        a.btn.btn-primary записаться
+  section.photo
+    .photo__title
+      .container
+        .row
+          .col-12
+            h2 Фотографии и видео клуба
+            p!="Клуб открыт в 2021 году и оснащен всем необходимым оборудованием<br> для комфортных занятий. Вам точно у нас понравится!"
+    .photo__slider
+      .swiper.photo__swiper
+        .swiper-wrapper
+          .swiper-slide.photo__slide
+            img(src=require("images/photo-01.png"))
+            .container
+              p кардио зона
+          .swiper-slide.photo__slide
+            img(src=require("images/photo-01.png"))
+            .container
+              p кардио зона
+          .swiper-slide.photo__slide
+            img(src=require("images/photo-01.png"))
+            .container
+              p кардио зона
+        .container.position-relative
+          .photo__slider-nav
+            .photo__slider-prev
+            .photo__slider-next
+  section.popular
+    .container
+      .row
+        .col-12
+          .popular__header
+            .popular__num 6
+            .popular__title
+              h2!="В нашем клубе предоставлено <span>популярных направлений</span>"
+          .popular__dec
+            p Узнайте подробнее о каждом из них.
+    .popular__items
+      .container-fluid.popular__container
+        .row.popular__row
+          .popular__slider.swiper
+            .swiper-wrapper
+              +popular-item(require("images/popular-01.png"), "кроссфит")
+              +popular-item(require("images/popular-01.png"), "Хатха йога")
+              +popular-item(require("images/popular-01.png"), "functional")
+              +popular-item(require("images/popular-01.png"), "Единоборства")
+              +popular-item(require("images/popular-01.png"), "Персональные тренировки")
+              +popular-item(require("images/popular-01.png"), "Здоровая спина")
+              +popular-item(require("images/popular-01.png"), "full body")
+              +popular-item(require("images/popular-01.png"), "Стретчинг")
+              +popular-item(require("images/popular-01.png"), "Body pump")
+

@@ -172,14 +172,7 @@ module.exports = (env) => {
 
       // Other pages
       ...utils.pages(MODE), // mode
-      ...utils.pages(MODE, 'blog'), // mode, folder name under pages
 
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.$': 'jquery',
-        'window.jQuery': 'jquery'
-      }),
       new WebpackNotifierPlugin({
         title: 'Your project'
       })
