@@ -140,19 +140,16 @@ block content
               span Старт
               p 1 июля 2020г.
             a(href="#").btn.btn-primary подробнее
-      .row.trainer__box-two
-        .trainer__head
+      .row
+        .trainer__head-two
           h2 Тренеры
-          p В фитнес-клубе Gold Gym собран один из лучших тренерских составов в Белгороде
-        .trainer__item
-          .trainer__item-img
-            img(src=require("images/trainer01.png"))
-          .trainer__item-title
-            p Алла Иванова
-              span Фитнес-тренер
-          .trainer__item-skills
-            .trainer__item-skill Кандидат в мастера спорта по жиму штанги лежа.
-            .trainer__item-skill Чемпион России по боксу.
-            .trainer__item-skill Имеет диплом "Фитнес-тренер групповых программ".
-            .trainer__item-skill Опыт работы - 5 лет.
-
+          p В фитнес-клубе Gold Gym собран один из лучших тренерских составов в Белгороде\
+      .row.trainer__box-two
+        +trainer-item
+        +trainer-item
+        +trainer-item
+        +trainer-item
+        +trainer-item
+        +trainer-item
+        +trainer-item
+        +trainer-item
