@@ -33,3 +33,13 @@ let popularSlider = new Swiper(".popular__slider", {
     },
   },
 });
+
+new Swiper(".stock__swiper", {
+  modules: [Navigation],
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".stock__slider-next",
+    prevEl: ".stock__slider-prev",
+  },
+});

@@ -48,8 +48,8 @@ block content
               p кардио зона
         .container.position-relative
           .photo__slider-nav
-            .photo__slider-prev
-            .photo__slider-next
+            .photo__slider-prev.slider-prev
+            .photo__slider-next.slider-next
   section.popular
     .container
       .row
@@ -74,4 +74,85 @@ block content
               +popular-item(require("images/popular-01.png"), "full body")
               +popular-item(require("images/popular-01.png"), "Стретчинг")
               +popular-item(require("images/popular-01.png"), "Body pump")
+  section.subscription
+    .container
+      .row
+        .col-12
+          h2.subscription__title!="У нас очень приятные цены<br> на покупку абонементов"
+          p.subscription__dec Выберите подходящий и оплатите онлайн
+  section.schedule
+    .container
+      .row
+        .col-12
+          .schedule__title
+            h2 Расписание
+            p Мы ждем вас еженевно Пн-Пт с 07:00 до 23:00; Сб-Вс с 09:00 до 21:00.
+            p Актуальное расписание групповых занятий представлено на сайте.
+  section.stock
+    .container
+      .row
+        .col-12
+          .stock__head
+            .stock__title
+              h2 Акции
+              p!="Самые выгодные предложения для занятий в нашем<br>фитнес-клубе. Успейте воспользоваться!"
+            .stock__slider-btn
+              .stock__slider-prev.slider-prev
+              .stock__slider-next.slider-next
+        .col-12
+          .stock__swiper.swiper
+            .swiper-wrapper
+              .swiper-slide
+                img(src=require("images/stock01.png"))
+              .swiper-slide
+                img(src=require("images/stock01.png"))
+              .swiper-slide
+                img(src=require("images/stock01.png"))
+              .swiper-slide
+                img(src=require("images/stock01.png"))
+              .swiper-slide
+                img(src=require("images/stock01.png"))
+              .swiper-slide
+                img(src=require("images/stock01.png"))
+              .swiper-slide
+                img(src=require("images/stock01.png"))
+              .swiper-slide
+                img(src=require("images/stock01.png"))
+  section.trainer
+    .container
+      .row
+        .trainer__box
+          .trainer__head
+            h2 Марафон преображения
+            p Интенсивная работа над собой за 4 недели.
+          .trainer__fact
+            +fact-item(require("images/fact/fact01.png"), "Персональные тренировки")
+            +fact-item(require("images/fact/fact02.png"), "Работа с психологом")
+            +fact-item(require("images/fact/fact03.png"), "Диетолог")
+            +fact-item(require("images/fact/fact04.png"), "Массаж")
+            +fact-item(require("images/fact/fact05.png"), "Растяжка ")
+          .trainer__footer
+            .trainer__price
+              span Стоимость
+              p 9 000
+                small ₽
+            .trainer__date
+              span Старт
+              p 1 июля 2020г.
+            a(href="#").btn.btn-primary подробнее
+      .row.trainer__box-two
+        .trainer__head
+          h2 Тренеры
+          p В фитнес-клубе Gold Gym собран один из лучших тренерских составов в Белгороде
+        .trainer__item
+          .trainer__item-img
+            img(src=require("images/trainer01.png"))
+          .trainer__item-title
+            p Алла Иванова
+              span Фитнес-тренер
+          .trainer__item-skills
+            .trainer__item-skill Кандидат в мастера спорта по жиму штанги лежа.
+            .trainer__item-skill Чемпион России по боксу.
+            .trainer__item-skill Имеет диплом "Фитнес-тренер групповых программ".
+            .trainer__item-skill Опыт работы - 5 лет.
 
