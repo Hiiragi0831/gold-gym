@@ -88,6 +88,112 @@ block content
             h2 Расписание
             p Мы ждем вас еженевно Пн-Пт с 07:00 до 23:00; Сб-Вс с 09:00 до 21:00.
             p Актуальное расписание групповых занятий представлено на сайте.
+          .schedule__table
+            table.table
+              thead
+                tr
+                  th(scope="col") понедельник
+                  th(scope="col") вторник
+                  th(scope="col") среда
+                  th(scope="col") четверг
+                  th(scope="col") пятница
+                  th(scope="col") суббота
+                  th(scope="col") воскресенье
+              tbody
+                tr
+                  td.schedule__td.schedule__td--2F80ED
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--9B51E0
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--27AE60
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--B30936
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--E6ADBC
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--F2994A
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td
+                    .schedule__td-lesson Выходной
+                tr
+                  td.schedule__td.schedule__td--2F80ED
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--9B51E0
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--27AE60
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--B30936
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--E6ADBC
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--F2994A
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                tr
+                  td.schedule__td.schedule__td--2F80ED
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--9B51E0
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--27AE60
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--B30936
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+                  td.schedule__td.schedule__td--E6ADBC
+                    .schedule__td-time 18:00
+                    .schedule__td-lesson Стретчинг
+                    .schedule__td-teach Валерия
+          .schedule__call
+            img(src=require("images/phone.png")).schedule__phone
+            form.offset-6
+              h2 Заказать звонок
+              .row
+                .col-12.col-md-6
+                  .form__input-group
+                    .form__input-icon
+                    input(placeholder="Ваше имя").form__input
+                .col-12.col-md-6
+                  .form__input-group
+                    .form__input-icon
+                    input(placeholder="+7 (___) ___-__-__").form__input
+                .col-12.col-md-6
+                  .form__input-group
+                    input(type="checkbox" id="defaultCheck1")
+                    label(for="defaultCheck1") Даю согласие на обработку персональных данных
+                .col-12.col-md-6
+                  button.btn.btn-primary Перезвоните мне
+
+
   section.stock
     .container
       .row
@@ -143,7 +249,7 @@ block content
       .row
         .trainer__head-two
           h2 Тренеры
-          p В фитнес-клубе Gold Gym собран один из лучших тренерских составов в Белгороде\
+          p В фитнес-клубе Gold Gym собран один из лучших тренерских составов в Белгороде
       .row.trainer__box-two
         +trainer-item
         +trainer-item
@@ -153,3 +259,24 @@ block content
         +trainer-item
         +trainer-item
         +trainer-item
+  section.contact
+    .container
+      .row
+        .contact__head
+          .contact__adress
+            h2!="г.Белгород,<br> пр.Славы, 112"
+          .contact__connection
+            p.contact__connection-phone 8 915 566 28 27
+            .contact__buttons
+              a(href="#").btn.btn-primary заказать звонок
+              .contact__socials
+                img(src=require("images/icons/icon-vk.svg")).contact__social
+                img(src=require("images/icons/icon-wa.svg")).contact__social
+                img(src=require("images/icons/icon-tg.svg")).contact__social
+                img(src=require("images/icons/icon-vb.svg")).contact__social
+          .contact__days
+            p Пн-Пт с 07:00 до 23:00
+            p Сб-Вс с 09:00 до 21:00
+      .row
+        .contact__map#map
+          img(src=require("images/conact-img.png")).contact__img

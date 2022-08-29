@@ -339,6 +339,7 @@
 .schedule {
   background-color: #F3F3F5;
   padding: 120px 0;
+  overflow: hidden;
 
   &__title {
     h2 {
@@ -359,6 +360,149 @@
       line-height: 178%;
       text-align: center;
     }
+  }
+
+  &__table {
+    margin-top: 52px;
+
+    table {
+      border-radius: 10px;
+      table-layout: fixed;
+      width: 100%;
+      overflow: auto;
+
+      td, th {
+        text-align: center;
+        padding: 32px 0;
+        border: 1px solid #F3F3F5;
+        background-color: $color-white;
+      }
+
+      th {
+        font-family: $font-manrope;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__td {
+    vertical-align: middle;
+    position: relative;
+
+    &-time,
+    &-lesson {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    &-teach {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 7px;
+      width: 80%;
+      border-radius: 5px 5px 0 0;
+      background-color: #F3F3F5;
+    }
+
+    &--2F80ED {
+      &:before {
+        background-color: #2F80ED;
+      }
+    }
+
+    &--9B51E0 {
+      &:before {
+        background-color: #9B51E0;
+      }
+    }
+
+    &--F2994A {
+      &:before {
+        background: #F2994A;
+      }
+    }
+
+    &--B30936 {
+      &:before {
+        background-color: #B30936;
+      }
+    }
+
+    &--E6ADBC {
+      &:before {
+        background-color: #E6ADBC;
+      }
+    }
+
+    &--27AE60 {
+      &:before {
+        background-color: #27AE60;
+      }
+    }
+  }
+
+  &__call {
+    position: relative;
+    display: flex;
+    padding-top: 120px;
+
+    & > * {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    form {
+      h2 {
+        font-family: $font-playfair-display;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 55px;
+        line-height: 66px;
+        margin-bottom: 24px;
+      }
+
+      input {
+        padding: 20px 36px;
+        border: 1px solid #F2F2F2;
+        border-radius: 120px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+
+  }
+
+  &__phone {
+    width: 750px;
+    position: absolute;
+    bottom: -400px;
+    left: 0;
   }
 }
 
@@ -635,5 +779,107 @@
         left: 0;
       }
     }
+
+    @media (max-width: 991px) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @media (max-width: 540px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.contact {
+  background-image: url("@~images/contact-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+
+  &__head {
+    display: flex;
+    width: 100%;
+    margin-bottom: 54px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+  }
+
+  &__adress {
+    h2 {
+      font-family: $font-playfair-display;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 55px;
+      line-height: 66px;
+    }
+  }
+
+  &__connection {
+    &-phone {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 49px;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    .btn {
+      padding: 22px 32px;
+    }
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+    }
+  }
+
+  &__socials {
+    margin-left: 16px;
+    display: flex;
+    gap: 14px;
+  }
+
+  &__social {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__days {
+    p {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 38px;
+    }
+  }
+
+  &__map {
+    position: relative;
+    height: 580px;
+    width: 100%;
+  }
+
+  &__img {
+    position: absolute;
+    top: 76px;
+    left: 48px;
+    width: 233px;
+    height: 144px;
+    z-index: 1;
   }
 }

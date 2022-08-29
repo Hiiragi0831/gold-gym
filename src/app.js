@@ -42,4 +42,46 @@ new Swiper(".stock__swiper", {
     nextEl: ".stock__slider-next",
     prevEl: ".stock__slider-prev",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    540: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+      center: [50.599863, 36.573775],
+      zoom: 17,
+      controls: []
+    }, {
+      searchControlProvider: 'yandex#search'
+    }),
+
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'assets/images/logo.svg',
+      // Размеры метки.
+      iconImageSize: [80, 80],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-40, -40]
+    });
+
+  myMap.geoObjects
+    .add(myPlacemark)
 });

@@ -1,2 +1,70 @@
 /* src/assets/styles/components/_footer.scss  */
 
+.footer {
+  padding: 120px 0;
+  background-color: $color-dark;
+  color: $color-white;
+
+  .row {
+    align-items: center;
+  }
+
+  &__brand {
+    p {
+      text-align: center;
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__company {
+    p {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 28px;
+      opacity: 0.4;
+    }
+  }
+
+  &__links {
+    a {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 24px;
+      opacity: 0.4;
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+
+  &__oblako {
+    margin-top: 9px;
+
+    p {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 24px;
+
+      a {
+        opacity: 1;
+        font-family: $font-manrope;
+        color: $color-yellow;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 24px;
+        text-decoration: none;
+      }
+    }
+  }
+}
