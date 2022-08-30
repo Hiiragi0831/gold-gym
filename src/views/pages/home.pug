@@ -54,12 +54,16 @@ block content
     .container
       .row
         .col-12
-          .popular__header
-            .popular__num 6
-            .popular__title
-              h2!="В нашем клубе предоставлено <span>популярных направлений</span>"
-          .popular__dec
-            p Узнайте подробнее о каждом из них.
+          .popular__box
+            .popular__header
+              .popular__title
+                .popular__num 6
+                h2!="В нашем клубе предоставлено <span>популярных направлений</span>"
+              .popular__dec
+                p Узнайте подробнее о каждом из них.
+            .popular__slider-btn
+              .popular__slider-prev.slider-prev
+              .popular__slider-next.slider-next
     .popular__items
       .container-fluid.popular__container
         .row.popular__row
@@ -80,6 +84,14 @@ block content
         .col-12
           h2.subscription__title!="У нас очень приятные цены<br> на покупку абонементов"
           p.subscription__dec Выберите подходящий и оплатите онлайн
+      .row
+        .subscription__tabs.tab
+          +tap-item("Дневной", "Безлимит1")
+          +tap-item("Дневной", "Безлимит2")
+          +tap-item("Дневной", "Безлимит3", true)
+          +tap-item("Дневной", "Безлимит4")
+          +tap-item("Дневной", "Безлимит5")
+          +tap-item("Дневной", "Безлимит6")
   section.schedule
     .container
       .row
@@ -175,25 +187,25 @@ block content
                     .schedule__td-teach Валерия
           .schedule__call
             img(src=require("images/phone.png")).schedule__phone
-            form.offset-6
+            form.form.offset-6
               h2 Заказать звонок
               .row
                 .col-12.col-md-6
                   .form__input-group
                     .form__input-icon
+                      img(src=require("images/icons/icon-name.svg"))
                     input(placeholder="Ваше имя").form__input
                 .col-12.col-md-6
                   .form__input-group
                     .form__input-icon
-                    input(placeholder="+7 (___) ___-__-__").form__input
+                      img(src=require("images/icons/icon-phone.svg"))
+                    input(placeholder="+7 (___) ___-__-__").form__input.js-phone-mask
                 .col-12.col-md-6
-                  .form__input-group
+                  .form__input-group.form__input-group--checkbox
                     input(type="checkbox" id="defaultCheck1")
-                    label(for="defaultCheck1") Даю согласие на обработку персональных данных
+                    label(for="defaultCheck1")!="Даю согласие на обработку<br> персональных данных"
                 .col-12.col-md-6
                   button.btn.btn-primary Перезвоните мне
-
-
   section.stock
     .container
       .row

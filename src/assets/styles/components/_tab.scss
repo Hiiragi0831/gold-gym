@@ -1,0 +1,136 @@
+.tab {
+  margin-top: 70px;
+  position: relative;
+
+  &__item {
+    width: 100%;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    position: relative;
+    border-radius: 10px;
+    padding: 34px;
+    width: 272px;
+    background-color: $color-white;
+    font-family: $font-manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 1;
+
+    &.is-active {
+      width: 336px;
+      background-color: $color-yellow;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: 0;
+    left: 302px;
+    right: calc(var(--bs-gutter-x) * .5);
+    height: 100%;
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 50px 80px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0.4s;
+
+    &.is-active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 66px;
+      margin-bottom: 10px;
+    }
+
+    &-dec {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 32px;
+      margin-bottom: 30px;
+    }
+
+    &-text {
+      background: #F3F3F5;
+      border-radius: 10px;
+      padding: 32px 42px;
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 28px;
+      opacity: 0.4;
+      margin-bottom: 90px;
+    }
+
+    &-box {
+      display: flex;
+    }
+
+    &-price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-right: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 0 47px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        border: none;
+      }
+    }
+
+    &-month {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      color: #504F4D;
+      opacity: 0.5;
+      margin-bottom: 8px;
+    }
+
+    &-cost {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 18px;
+
+      span {
+        margin-left: 6px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 32px;
+      }
+    }
+
+    .btn {
+      padding: 22px 27px;
+    }
+  }
+}

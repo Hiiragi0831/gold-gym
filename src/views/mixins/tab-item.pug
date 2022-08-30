@@ -1,0 +1,29 @@
+mixin tap-item(title, titleTwo, active)
+  .tab__item
+    .tab__title(class=active ? "is-active" : "")
+      p=title
+    .tab__body(class=active ? "is-active" : "")
+      h3.tab__body-title=titleTwo
+      p.tab__body-dec В стоимость абонемента входят:
+      p.tab__body-text Стартовый пакет включает в себя фитнес - тестирование, вводное занятие в тренажерном зале, зоне групповых программ и бассейне, комплимент от бара, spa-услуги в подарок,  а так же один гостевой визит.
+      .tab__body-box
+        .tab__body-price
+          p.tab__body-month 1 месяц
+          p.tab__body-cost 2 200
+            span ₽
+          a(href="#").btn.btn-primary купить
+        .tab__body-price
+          p.tab__body-month 1 месяц
+          p.tab__body-cost 2 200
+            span ₽
+          a(href="#").btn.btn-primary купить
+        .tab__body-price
+          p.tab__body-month 1 месяц
+          p.tab__body-cost 2 200
+            span ₽
+          a(href="#").btn.btn-primary купить
+        .tab__body-price
+          p.tab__body-month 1 месяц
+          p.tab__body-cost 2 200
+            span ₽
+          a(href="#").btn.btn-primary купить
