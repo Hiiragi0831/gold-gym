@@ -1,0 +1,174 @@
+.modal {
+  &__normal {
+    max-width: 680px;
+  }
+
+  &__large {
+    max-width: 1140px;
+  }
+
+  &__small {
+    max-width: 530px;
+  }
+
+  .btn-close {
+    box-shadow: none;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-size: 30px;
+
+    @media (max-width: 767px) {
+      top: 15px;
+      right: 15px;
+      width: 15px;
+      height: 15px;
+      background-size: 15px;
+    }
+  }
+
+  &-content {
+    border-radius: 0;
+    border: 3px solid #666665;
+
+    &-gray {
+      background: #F3F3F5;
+    }
+
+    &-dark {
+      background-color: #1A1A18;
+
+      .btn-close {
+        background-image: url("@~images/icons/close.svg");
+        opacity: 1;
+        transition: opacity 0.15s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  &__body {
+    padding: 90px 70px 70px 70px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 767px) {
+      padding: 30px 15px 15px 15px;
+    }
+  }
+
+  &__title {
+    font-family: $font-playfair-display;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+      font-size: px(35);
+    }
+  }
+
+  &__dec {
+    font-family: $font-manrope;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      font-size: px(18);
+      line-height: px(32);
+    }
+  }
+  .btn {
+    margin: 30px auto 0;
+  }
+
+  .form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    .bnt {
+      margin-top: 20px;
+    }
+  }
+
+  .form__input-group {
+    margin-bottom: 20px;
+  }
+
+  &__logo {
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    margin-top: 30px;
+    p {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .popular__item {
+    max-height: 430px;
+  }
+
+  .trainer__item {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__scroll {
+    max-height: 660px;
+    padding-right: 13px;
+
+    @media (max-width: 767px) {
+      max-height: 360px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 30px;
+
+    .btn {
+      margin: 0;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}

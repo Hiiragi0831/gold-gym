@@ -2,6 +2,8 @@
 import 'bootstrap'
 import Swiper, { Navigation, Pagination, Grid} from 'swiper';
 import IMask from "imask";
+import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+import 'simplebar/dist/simplebar.css';
 // Styles
 import 'styles/_app.scss'
 

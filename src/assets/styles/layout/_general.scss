@@ -18,3 +18,19 @@ body {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   margin: 0;
 }
+
+.simplebar-scrollbar:before {
+  background-color: $color-yellow;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.simplebar-track.simplebar-vertical {
+  background-color: #666665;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}

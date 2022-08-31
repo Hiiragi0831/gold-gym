@@ -1,10 +1,1 @@
-<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle r="2.5" transform="matrix(-1 0 0 1 4.5 4.5)" fill="#F6DE0E"/>
-<circle opacity="0.7" r="4.25" transform="matrix(-1 0 0 1 4.5 4.5)" stroke="url(#paint0_angular_118_1724)" stroke-width="0.5"/>
-<defs>
-<radialGradient id="paint0_angular_118_1724" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.5 4.5) rotate(90) scale(4.5)">
-<stop stop-color="#F6DE0E"/>
-<stop offset="1" stop-color="#F6DE0E" stop-opacity="0"/>
-</radialGradient>
-</defs>
-</svg>
+<svg fill="none" height="9" viewBox="0 0 9 9" width="9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><radialGradient id="a" cx="0" cy="0" gradientTransform="matrix(0 4.5 -4.5 0 4.5 4.5)" gradientUnits="userSpaceOnUse" r="1"><stop offset="0" stop-color="#f6de0e"/><stop offset="1" stop-color="#f6de0e" stop-opacity="0"/></radialGradient><g transform="matrix(-1 0 0 1 4.5 4.5)"><circle fill="#f6de0e" r="2.5"/><circle opacity=".7" r="4.25" stroke="url(#a)" stroke-width=".5"/></g></svg>

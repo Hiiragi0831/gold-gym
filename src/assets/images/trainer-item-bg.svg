@@ -1,18 +1,1 @@
-<svg width="226" height="273" viewBox="0 0 226 273" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="1" y="46" width="224" height="226" rx="10" fill="#C7C7C7"/>
-<mask id="mask0_118_1711" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="226" height="273">
-<path d="M0 12.0797C0 5.40825 4.47715 0 10 0H216C221.523 0 226 5.40824 226 12.0796V260.92C226 267.592 221.523 273 216 273H10C4.47716 273 0 267.592 0 260.92V12.0797Z" fill="white"/>
-</mask>
-<g mask="url(#mask0_118_1711)">
-<g filter="url(#filter0_f_118_1711)">
-<circle cx="117.5" cy="153.5" r="101.5" fill="white"/>
-</g>
-</g>
-<defs>
-<filter id="filter0_f_118_1711" x="-34" y="2" width="303" height="303" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="25" result="effect1_foregroundBlur_118_1711"/>
-</filter>
-</defs>
-</svg>
+<svg fill="none" height="273" viewBox="0 0 226 273" width="226" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><filter id="a" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="303" width="303" x="-34" y="2"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_118_1711" stdDeviation="25"/></filter><mask id="b" height="273" maskUnits="userSpaceOnUse" width="226" x="0" y="0"><path d="m0 12.0797c0-6.67145 4.47715-12.0797 10-12.0797h206c5.523 0 10 5.40824 10 12.0796v248.8404c0 6.672-4.477 12.08-10 12.08h-206c-5.52284 0-10-5.408-10-12.08z" fill="#fff"/></mask><rect fill="#c7c7c7" height="226" rx="10" width="224" x="1" y="46"/><g mask="url(#b)"><g filter="url(#a)"><circle cx="117.5" cy="153.5" fill="#fff" r="101.5"/></g></g></svg>
