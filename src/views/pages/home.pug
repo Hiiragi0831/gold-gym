@@ -19,11 +19,30 @@ block content
     .start__sportmen
       img(src=require("images/start-01.png"))
     .start__title
-      img(src=require("images/title-banner.svg"))
+      img(src=require("images/title-banner.svg")).start__title-img
       .start__title-text
         h1 Фитнес-клуб
         p в центре Белгорода
-        a.btn.btn-primary записаться
+        a(href="#").btn.btn-primary записаться
+        a(href="#").btn-video
+          .btn-video-bg
+            img(src=require("images/icons/icon-play.svg"))
+    .start__numbers
+      .start__numbers-item
+        p.start__numbers-num 9
+        p.start__numbers-text!="направлений<br>групповых<br>тренировок"
+      .start__numbers-item
+        p.start__numbers-num 15
+        p.start__numbers-text!="профессиональных<br>высококлассных<br>тренеров"
+      .start__numbers-item
+        p.start__numbers-num 100
+        p.start__numbers-text!="бесплатных<br>парковочных<br>мест"
+      .start__numbers-item
+        p.start__numbers-num 300
+        p.start__numbers-text!="новых<br>современных<br>тренажеров"
+      .start__numbers-item
+        p.start__numbers-num 1000
+        p.start__numbers-text!="кв. м<br>общая площадь<br>клуба"
   section.photo
     .photo__title
       .container
@@ -221,21 +240,29 @@ block content
           .stock__swiper.swiper
             .swiper-wrapper
               .swiper-slide
-                img(src=require("images/stock01.png"))
+                a(href="#").stock__item
+                  img(src=require("images/stock01.png"))
               .swiper-slide
-                img(src=require("images/stock01.png"))
+                a(href="#").stock__item
+                  img(src=require("images/stock01.png"))
               .swiper-slide
-                img(src=require("images/stock01.png"))
+                a(href="#").stock__item
+                  img(src=require("images/stock01.png"))
               .swiper-slide
-                img(src=require("images/stock01.png"))
+                a(href="#").stock__item
+                  img(src=require("images/stock01.png"))
               .swiper-slide
-                img(src=require("images/stock01.png"))
+                a(href="#").stock__item
+                  img(src=require("images/stock01.png"))
               .swiper-slide
-                img(src=require("images/stock01.png"))
+                a(href="#").stock__item
+                  img(src=require("images/stock01.png"))
               .swiper-slide
-                img(src=require("images/stock01.png"))
+                a(href="#").stock__item
+                  img(src=require("images/stock01.png"))
               .swiper-slide
-                img(src=require("images/stock01.png"))
+                a(href="#").stock__item
+                  img(src=require("images/stock01.png"))
   section.trainer
     .container
       .row
@@ -282,10 +309,14 @@ block content
             .contact__buttons
               a(href="#").btn.btn-primary заказать звонок
               .contact__socials
-                img(src=require("images/icons/icon-vk.svg")).contact__social
-                img(src=require("images/icons/icon-wa.svg")).contact__social
-                img(src=require("images/icons/icon-tg.svg")).contact__social
-                img(src=require("images/icons/icon-vb.svg")).contact__social
+                a(href="#")
+                  img(src=require("images/icons/icon-vk.svg")).contact__social
+                a(href="#")
+                  img(src=require("images/icons/icon-wa.svg")).contact__social
+                a(href="#")
+                  img(src=require("images/icons/icon-tg.svg")).contact__social
+                a(href="#")
+                  img(src=require("images/icons/icon-vb.svg")).contact__social
           .contact__days
             p Пн-Пт с 07:00 до 23:00
             p Сб-Вс с 09:00 до 21:00

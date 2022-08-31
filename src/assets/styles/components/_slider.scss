@@ -10,6 +10,11 @@
     background-repeat: no-repeat;
     background-size: 30px 10px;
     cursor: pointer;
+    transition: background-color 0.15s;
+
+    &:hover {
+      background-color: $color-yellow;
+    }
   }
 
   &-prev {

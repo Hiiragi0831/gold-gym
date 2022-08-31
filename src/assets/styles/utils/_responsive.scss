@@ -22,3 +22,7 @@
 @function vt($value, $base: $tablet) {
   @return $value / $base * 100vmin;
 }
+
+@function vw100($value, $base: $laptop) {
+  @return 100vw - $value / $base * 100vw;
+}
