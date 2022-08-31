@@ -12,15 +12,25 @@
   padding: 26px 52px;
   border: none;
   outline: none;
+  border-radius: 100px;
 
 
   &-primary {
     background: $color-yellow;
-    border-radius: 100px;
 
     &:hover {
       color: $color-white;
       background: $color-dark;
+    }
+  }
+
+  &-transparent {
+    background: rgba(217,217,217, 0.1);
+    color: $color-white;
+
+    &:hover {
+      color: $color-dark;
+      background: $color-yellow;
     }
   }
 }

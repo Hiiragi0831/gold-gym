@@ -1,2 +1,98 @@
 /* src/assets/styles/components/_menu.scss  */
 
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 28px 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-white;
+  z-index: 99;
+
+  &__logo {
+    &:before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 134px;
+      height: 2px;
+      background-color: $color-yellow;
+      width: 60px;
+    }
+  }
+
+  &__adress,
+  &__phone {
+    span {
+      font-family: $font-playfair-display;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 17px;
+      opacity: 0.3;
+    }
+
+    p {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 23px;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+
+    img {
+      width: 15px;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-shrink: 0;
+    gap: 15px;
+
+    &-item {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 17px;
+      color: $color-white;
+      line-height: 23px;
+      transition: color 0.15s;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-shrink: 0;
+    gap: 15px;
+
+    a {
+      transition: opacity 0.15s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__button {
+    .btn {
+
+    }
+  }
+
+}
