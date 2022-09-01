@@ -61,8 +61,12 @@
       font-style: normal;
       font-weight: 400;
       font-size: 36px;
-      line-height: 66px;
+      line-height: 180%;
       margin-bottom: 10px;
+
+      @include mobile {
+        font-size: 33px;
+      }
     }
 
     &-dec {
@@ -70,7 +74,7 @@
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
-      line-height: 32px;
+      line-height: 180%;
       margin-bottom: 30px;
     }
 
@@ -85,11 +89,20 @@
       line-height: 28px;
       opacity: 0.4;
       margin-bottom: 90px;
+
+      @include mobile {
+        padding: 16px 21px;
+        margin-bottom: 40px;
+      }
     }
 
     &-box {
       display: flex;
       justify-content: center;
+
+      @include mobile {
+        flex-direction: column;
+      }
     }
 
     &-price {
@@ -112,6 +125,12 @@
 
       @media (min-width: 1920px) {
         padding: 0 px(47);
+      }
+
+      @include mobile {
+        padding: 15px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       }
     }
 
@@ -144,7 +163,12 @@
     .btn {
       padding: 22px 27px;
     }
+
+    @include mobile {
+      padding: 20px 30px;
+    }
   }
+
   @media (max-width: 1200px) {
     &__title {
       width: 100%;
@@ -167,5 +191,4 @@
       }
     }
   }
-
 }

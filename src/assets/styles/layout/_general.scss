@@ -19,13 +19,37 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p {
   margin: 0;
 }
 
+h2, .h2 {
+  font-family: $font-playfair-display;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 120%;
+
+  @include mobile {
+    font-size: 33px;
+  }
+}
+
+.paragraph {
+  font-family: $font-manrope;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 180%;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
 .simplebar-scrollbar:before {
   background-color: $color-yellow;
   opacity: 1;
   border-radius: 0;
 }
 
-.simplebar-track.simplebar-vertical {
+.simplebar-track {
   background-color: #666665;
   opacity: 1;
   border-radius: 0;
