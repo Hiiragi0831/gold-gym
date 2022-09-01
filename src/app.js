@@ -99,5 +99,26 @@ window.addEventListener('DOMContentLoaded', () => {
       IMask(item, {mask: '+{7} (000) 000-00-00', lazy: false,});
     })
 
+    const tab = document.querySelectorAll(".tab");
+
+    tab.forEach(item => {
+      item.querySelectorAll('.tab__item').forEach(tabItem => {
+        tabItem.querySelector('.tab__title').addEventListener('click', () => {
+          item.querySelector('.tab__title.is-active').classList.remove('is-active');
+          item.querySelector('.tab__body.is-active').classList.remove('is-active');
+
+          tabItem.querySelector('.tab__title').classList.add('is-active');
+          tabItem.querySelector('.tab__body').classList.add('is-active');
+        })
+      })
+    });
+
+
+
+
+
+
+
+
   });
 });

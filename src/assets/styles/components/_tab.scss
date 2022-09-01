@@ -26,7 +26,7 @@
     text-transform: uppercase;
     cursor: pointer;
     z-index: 1;
-    transition: background-color 0.15s;
+    transition: all 0.15s;
 
     &.is-active {
       width: 336px;
@@ -44,12 +44,13 @@
     left: 302px;
     right: calc(var(--bs-gutter-x) * .5);
     height: 100%;
+    padding: 50px 80px;
     background-color: $color-white;
     border-radius: 10px;
-    padding: 50px 80px;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.15s, visibility 0.15s;
+    overflow: hidden;
+    transition: all 0.15s;
 
     &.is-active {
       visibility: visible;
@@ -88,6 +89,7 @@
 
     &-box {
       display: flex;
+      justify-content: center;
     }
 
     &-price {
@@ -143,4 +145,27 @@
       padding: 22px 27px;
     }
   }
+  @media (max-width: 1200px) {
+    &__title {
+      width: 100%;
+
+      &.is-active {
+        width: 100%;
+      }
+    }
+
+    &__body {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin-top: 15px;
+      display: none;
+
+      &.is-active {
+        display: block;
+      }
+    }
+  }
+
 }
