@@ -26,13 +26,14 @@
       height: 100%;
     }
 
+    @include desktop {
+      max-width: px(500);
+    }
+
     @include desktop-xl {
       max-width: px(600);
     }
 
-    @include desktop {
-      max-width: px(500);
-    }
 
     @include tablet {
       max-width: px(440);

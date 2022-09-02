@@ -115,6 +115,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     new SimpleBar(document.querySelector(".schedule__table"));
 
-
+    document.querySelector('.header__burger').addEventListener("click", () => {
+      document.querySelector('.header__burger').classList.toggle('is-active');
+      document.querySelector(".header-mobile").classList.toggle('is-active');
+      document.querySelector(".header").classList.toggle('is-active');
+      document.querySelector("body").classList.toggle('body-lock');
+    })
   });
 });

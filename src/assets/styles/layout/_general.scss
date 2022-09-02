@@ -58,3 +58,8 @@ h2, .h2 {
 .simplebar-scrollbar.simplebar-visible:before {
   opacity: 1;
 }
+
+.body-lock {
+  overflow: hidden;
+  padding-right: 0;
+}
