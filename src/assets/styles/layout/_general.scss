@@ -6,6 +6,12 @@ body {
   color: $color-dark;
 }
 
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   @media (min-width: 1400px) {
     max-width: 1170px;
@@ -62,4 +68,8 @@ h2, .h2 {
 .body-lock {
   overflow: hidden;
   padding-right: 0;
+}
+
+.z-index-5 {
+  z-index: 5;
 }

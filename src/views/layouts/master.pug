@@ -51,15 +51,16 @@ html(lang='en')
 
   body
     include ../mixins.pug
-    //- Menu
-    include ../components/header.pug
+    .site
+      //- Menu
+      include ../components/header.pug
 
-    //- block content
-    main
-      block content
+      //- block content
+      main
+        block content
 
-    //- Footer
-    include ../components/footer.pug
+      //- Footer
+      include ../components/footer.pug
 
     //- block scripts
     block scripts

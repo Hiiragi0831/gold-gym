@@ -1,31 +1,42 @@
 /* src/app.js */
 import 'bootstrap'
-import Swiper, { Navigation, Pagination, Grid} from 'swiper';
+import Swiper, { Navigation, Pagination, Grid, Autoplay} from 'swiper';
 import IMask from "imask";
 import SimpleBar from 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
-import 'simplebar/dist/simplebar.css';
+import AOS from 'aos';
+
 // Styles
+import 'simplebar/dist/simplebar.css';
+import 'aos/dist/aos.css';
 import 'styles/_app.scss'
 
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     new Swiper(".photo__swiper", {
-      modules: [Navigation, Pagination],
+      modules: [Navigation, Pagination, Autoplay],
       navigation: {
         nextEl: ".photo__slider-next",
         prevEl: ".photo__slider-prev",
       },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
     });
 
     let popularSlider = new Swiper(".popular__slider", {
-      modules: [Grid, Navigation],
+      modules: [Grid, Navigation, Autoplay],
       slidesPerView: 1,
       spaceBetween: 30,
       observer: true,
       updateOnWindowResize: true,
       grid: {
         rows: 3,
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
       },
       breakpoints: {
         320: {
@@ -45,12 +56,16 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     new Swiper(".stock__swiper", {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
       slidesPerView: 4,
       spaceBetween: 30,
       navigation: {
         nextEl: ".stock__slider-next",
         prevEl: ".stock__slider-prev",
+      },
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
       },
       breakpoints: {
         320: {
@@ -121,5 +136,32 @@ window.addEventListener('DOMContentLoaded', () => {
       document.querySelector(".header").classList.toggle('is-active');
       document.querySelector("body").classList.toggle('body-lock');
     })
+
+    const lesson = document.querySelector(".schedule__table").querySelectorAll('.schedule__td');
+
+    lesson.forEach(item => {
+      item.querySelector('.schedule__td-lesson').addEventListener('mouseover', () => {
+        lesson.forEach(i => {
+          if (item.querySelector('.schedule__td-lesson').innerHTML === i.querySelector('.schedule__td-lesson').innerHTML) {
+            i.classList.add('is-active');
+          }
+        })
+      })
+
+      item.querySelector('.schedule__td-lesson').addEventListener('mouseout', () => {
+        document.querySelector(".schedule__table").querySelectorAll('.schedule__td.is-active').forEach(i => {
+          i.classList.remove('is-active');
+        });
+      })
+    })
+
+
+
+
+
+
+
+
+    AOS.init();
   });
 });

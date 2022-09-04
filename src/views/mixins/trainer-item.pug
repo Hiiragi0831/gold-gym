@@ -1,7 +1,11 @@
 mixin trainer-item()
-  a(href="#").trainer__item
+  a(href="#").trainer__item(data-aos="fade-down" data-aos-delay="100")
     .trainer__item-img
-      img(src=require("images/trainer01.png"))
+      video(muted="" loop="" preload="none" onmouseover="this.play()" onmouseout="this.pause();this.currentTime = 0;this.load();" poster=require("images/trainer01.png")).w-100
+        source(src=require("images/MAHpHowz.mp4") type='video/mp4')
+        source(src=require("images/MAHpHowz.webm") type='video/webm')
+        img(src=require("images/trainer01.png") alt='Щеглов Ян')
+      //img(src=require("images/trainer01.png"))
     .trainer__item-title
       p Алла Иванова
         span Фитнес-тренер
