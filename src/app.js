@@ -137,6 +137,15 @@ window.addEventListener('DOMContentLoaded', () => {
       document.querySelector("body").classList.toggle('body-lock');
     })
 
+    document.querySelectorAll('.header__menu-item').forEach(item => {
+      item.addEventListener("click", () => {
+        document.querySelector('.header__burger').classList.toggle('is-active');
+        document.querySelector(".header-mobile").classList.toggle('is-active');
+        document.querySelector(".header").classList.toggle('is-active');
+        document.querySelector("body").classList.toggle('body-lock');
+      })
+    })
+
     const lesson = document.querySelector(".schedule__table").querySelectorAll('.schedule__td');
 
     lesson.forEach(item => {
