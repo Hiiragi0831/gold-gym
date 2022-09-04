@@ -139,10 +139,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.header__menu-item').forEach(item => {
       item.addEventListener("click", () => {
-        document.querySelector('.header__burger').classList.toggle('is-active');
-        document.querySelector(".header-mobile").classList.toggle('is-active');
-        document.querySelector(".header").classList.toggle('is-active');
-        document.querySelector("body").classList.toggle('body-lock');
+        document.querySelector('.header__burger.is-active').classList.remove('is-active');
+        document.querySelector(".header-mobile.is-active").classList.remove('is-active');
+        document.querySelector(".header.is-active").classList.remove('is-active');
+        document.querySelector("body.body-lock").classList.remove('body-lock');
       })
     })
 
