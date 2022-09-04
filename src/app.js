@@ -13,7 +13,7 @@ import 'styles/_app.scss'
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
-    new Swiper(".photo__swiper", {
+    let photoSlider = new Swiper(".photo__swiper", {
       modules: [Navigation, Pagination, Autoplay],
       navigation: {
         nextEl: ".photo__slider-next",
@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
       observer: true,
       updateOnWindowResize: true,
       grid: {
-        rows: 3,
+        rows: 1,
       },
       autoplay: {
         delay: 5000,
@@ -41,12 +41,21 @@ window.addEventListener('DOMContentLoaded', () => {
       breakpoints: {
         320: {
           slidesPerView: 1,
+          grid: {
+            rows: 1,
+          },
         },
         768: {
           slidesPerView: 2,
+          grid: {
+            rows: 2,
+          },
         },
         991: {
           slidesPerView: 3,
+          grid: {
+            rows: 3,
+          },
         },
       },
       navigation: {
@@ -55,7 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
 
-    new Swiper(".stock__swiper", {
+    let stockSlider = new Swiper(".stock__swiper", {
       modules: [Navigation, Autoplay],
       slidesPerView: 4,
       spaceBetween: 30,
@@ -163,13 +172,6 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       })
     })
-
-
-
-
-
-
-
 
     AOS.init();
   });

@@ -526,9 +526,14 @@
     height: 1350px;
     position: relative;
 
-    @include mobile {
-      height: 800px;
+    @include tablet {
+      height: 900px;
     }
+
+    @include mobile {
+      height: 350px;
+    }
+
   }
 
   &__slider-btn {
@@ -543,6 +548,14 @@
 
   &__slide {
     height: calc((100% - 60px) / 3) !important;
+
+    @include tablet {
+      height: calc((100% - 30px) / 2) !important;
+    }
+
+    @include mobile {
+      height: 100% !important;
+    }
   }
 
   &:before {
@@ -1168,6 +1181,16 @@
       font-size: 36px;
       line-height: 49px;
       margin-bottom: 6px;
+
+      a {
+        color: $color-dark;
+        text-decoration: none;
+        transition: color 0.15s;
+
+        &:hover {
+          color: $color-yellow;
+        }
+      }
     }
 
     @media (max-width: 1200px) {
