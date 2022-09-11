@@ -128,19 +128,19 @@ window.addEventListener('DOMContentLoaded', () => {
       })
     })
 
-    const lesson = document.querySelector(".schedule__table").querySelectorAll('.schedule__td');
+    const lesson = document.querySelector(".table-gold").querySelectorAll('.table-gold__td');
 
     lesson.forEach(item => {
-      item.querySelector('.schedule__td-lesson').addEventListener('mouseover', () => {
+      item.querySelector('.table-gold__td-lesson').addEventListener('mouseover', () => {
         lesson.forEach(i => {
-          if (item.querySelector('.schedule__td-lesson').innerHTML === i.querySelector('.schedule__td-lesson').innerHTML) {
+          if (item.querySelector('.table-gold__td-lesson').innerHTML === i.querySelector('.table-gold__td-lesson').innerHTML) {
             i.classList.add('is-active');
           }
         })
       })
 
-      item.querySelector('.schedule__td-lesson').addEventListener('mouseout', () => {
-        document.querySelector(".schedule__table").querySelectorAll('.schedule__td.is-active').forEach(i => {
+      item.querySelector('.table-gold__td-lesson').addEventListener('mouseout', () => {
+        document.querySelector(".table-gold").querySelectorAll('.table-gold__td.is-active').forEach(i => {
           i.classList.remove('is-active');
         });
       })

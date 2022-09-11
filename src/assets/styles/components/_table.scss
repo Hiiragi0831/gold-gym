@@ -1,0 +1,135 @@
+.table-gold {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  min-width: 1000px;
+
+  &__head {
+    display: flex;
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__tr {
+    width: calc(100% / 7);
+  }
+
+  &__td, &__th {
+    text-align: center;
+    padding: 32px 0;
+    border: 1px solid #F3F3F5;
+    background-color: $color-white;
+    transition: background-color 0.15s, color 0.15s;
+
+    &.is-active {
+      background-color: $color-dark;
+      color: $color-white;
+    }
+  }
+
+  &__th {
+    font-family: $font-manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    flex: 0 0 auto;
+    width: calc(100% / 7);
+  }
+
+  &__td {
+    vertical-align: middle;
+    position: relative;
+    height: 120px;
+
+    &-time,
+    &-lesson {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    &-lesson {
+      cursor: pointer;
+      transition: color 0.15s;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+
+    &-teach {
+      font-family: $font-manrope;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      text-align: center;
+      cursor: pointer;
+      transition: color 0.15s;
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 7px;
+      width: 80%;
+      border-radius: 5px 5px 0 0;
+      background-color: #F3F3F5;
+    }
+
+    &--2F80ED {
+      &:before {
+        background-color: #2F80ED;
+      }
+    }
+
+    &--9B51E0 {
+      &:before {
+        background-color: #9B51E0;
+      }
+    }
+
+    &--F2994A {
+      &:before {
+        background: #F2994A;
+      }
+    }
+
+    &--B30936 {
+      &:before {
+        background-color: #B30936;
+      }
+    }
+
+    &--E6ADBC {
+      &:before {
+        background-color: #E6ADBC;
+      }
+    }
+
+    &--27AE60 {
+      &:before {
+        background-color: #27AE60;
+      }
+    }
+  }
+}
